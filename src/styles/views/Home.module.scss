@@ -1,0 +1,69 @@
+@use '../variables/colors' as c;
+@use '../mixins/media' as m;
+@use '../variables/typography' as t;
+
+.header {
+  padding: 2rem;
+
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+
+    &:nth-child(2) {
+      align-items: flex-end;
+    }
+
+    span {
+      color: c.$light-color;
+      font-family: t.$font-space-grotesk;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: calc(1.1rem * 1.5);
+    }
+
+    .header__logo,
+    .header__index {
+      font-size: 6rem;
+      line-height: calc(6rem * 1.1);
+      text-transform: uppercase;
+    }
+
+    .header__index {
+      font-size: 3rem;
+      line-height: calc(3rem * 1.5);
+      text-decoration: .15rem solid c.$light-color underline;
+    }
+
+    .header__text {
+      max-width: 50rem;
+      text-align: justify;
+    }
+
+    .header__image {
+      max-width: 40rem;
+      width: 100%;
+      height: 50rem;
+      background-image: url('@assets/landscape.jpg');
+      background-color: c.$dark-color;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .header__title {
+    padding: 10rem 0 2rem;
+    color: c.$light-color;
+    font-family: t.$font-space-grotesk;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: calc(6rem * 1);
+    text-transform: uppercase;
+
+    span {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use '../variables/colors' as c;
+@use '../mixins/media' as m;
+
+html, body {
+  margin: 0;
+  padding: 2rem;
+  background-image: url('@assets/colorful.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: c.$dark-color;
+
+  .layout {
+    color: c.$light-color;
+    background-color: c.$dark-color;
+    filter: opacity(90%);
+    // mix-blend-mode: darken;
+
+    @include m.smartphone() {
+      background-color: c.$dark-color;
+    }
+  }
+}

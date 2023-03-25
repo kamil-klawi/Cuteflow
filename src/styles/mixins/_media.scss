@@ -1,0 +1,13 @@
+@use '../variables/breakpoints' as b;
+
+@mixin smartphone() {
+  @media (max-width: b.$sm) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media (max-width: b.$md) {
+    @content;
+  }
+}
