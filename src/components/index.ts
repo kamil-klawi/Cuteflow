@@ -1,4 +1,5 @@
 import CardList from './CardList'
 import ImageLink from './ImageLink'
+import Footer from './Footer'
 
-export { CardList, ImageLink }
+export { CardList, ImageLink, Footer }

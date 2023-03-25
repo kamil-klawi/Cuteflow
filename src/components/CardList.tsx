@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import Card from './Card'
 import s from '@styles/components/CardList.module.scss'
 
@@ -42,13 +43,13 @@ const data = [
 
 export default function CardList() {
   const render = data.map((item, index) => (
-    <div key={index}>
+    <Fragment key={index}>
       <Card
         url={item.url}
         title={item.title}
         genre={item.genre}
       />
-    </div>
+    </Fragment>
   ))
   return <div className={s.list}>{render}</div>
 }

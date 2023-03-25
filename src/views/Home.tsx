@@ -1,4 +1,5 @@
-import { CardList, ImageLink } from '@components'
+import { Fragment } from 'react'
+import { CardList, ImageLink, Footer } from '@components'
 import s from '@styles/views/Home.module.scss'
 
 const images = [
@@ -12,11 +13,11 @@ const images = [
 
 function Home() {
   const renderImage = images.map((item, index) => (
-    <div key={index}>
+    <Fragment key={index}>
       <ImageLink
         header={item.header}
       />
-    </div>
+    </Fragment>
   ))
 
   return (
@@ -38,6 +39,9 @@ function Home() {
       <header className={s.header}>
         {renderImage}
       </header>
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }

@@ -7,8 +7,8 @@ export default function Card(cardProps: SongProps) {
     <div className={s.card}>
       <ReactPlayer
         className={s.card__video}
-        volume={0.05}
-        controls={false}
+        controls={true}
+        volume={1}
         url={cardProps.url}
       />
       <div className={s.card__content}>
