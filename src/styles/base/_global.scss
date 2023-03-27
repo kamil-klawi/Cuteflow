@@ -10,6 +10,10 @@ html, body {
   background-size: cover;
   background-color: c.$dark-color;
 
+  @include m.smartphone() {
+    padding: 0;
+  }
+
   .layout {
     color: c.$light-color;
     background-color: c.$dark-color;

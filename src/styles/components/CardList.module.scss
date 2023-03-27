@@ -1,6 +1,22 @@
+@use '../mixins/media' as m;
+
 .list {
   display: flex;
   align-items: center;
   gap: 2rem;
   overflow: auto;
+}
+
+.table {
+  display: grid;
+  justify-content: center; 
+  align-content: center;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem;
+
+  @include m.smartphone() {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
