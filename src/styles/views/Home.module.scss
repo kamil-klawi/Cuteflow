@@ -13,6 +13,11 @@
 
     &:nth-child(2) {
       align-items: flex-end;
+
+      @include m.smartphone() {
+        padding: 4rem 0 0;
+        display: block;
+      }
     }
 
     span ,
@@ -29,6 +34,11 @@
       font-size: 6rem;
       line-height: calc(6rem * 1.1);
       text-transform: uppercase;
+
+      @include m.smartphone() {
+        font-size: 4rem;
+        line-height: calc(4rem * 1.1);
+      }
     }
 
     .header__index {
@@ -36,6 +46,11 @@
       line-height: calc(3rem * 1.5);
       text-transform: uppercase;
       text-decoration: .15rem solid c.$light-color underline;
+
+      @include m.smartphone() {
+        font-size: 2rem;
+        line-height: calc(2rem * 1.1);
+      }
     }
 
     .header__text {
@@ -63,6 +78,12 @@
     font-size: 6rem;
     line-height: calc(6rem * 1);
     text-transform: uppercase;
+
+    @include m.smartphone() {
+      padding: 4rem 0;
+      font-size: 4rem;
+      line-height: calc(4rem * 1.1);
+    }
 
     span {
       display: flex;

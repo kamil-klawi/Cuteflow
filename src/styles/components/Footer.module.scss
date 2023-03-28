@@ -1,5 +1,6 @@
 @use '../variables/colors' as c;
 @use '../variables/typography' as t;
+@use '../mixins/media' as m;
 
 .footer {
   padding: 2rem;
@@ -8,10 +9,18 @@
   align-items: center;
   width: 100%;
 
+  @include m.smartphone() {
+    display: block;
+  }
+
   .footer__content {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include m.smartphone() {
+      padding: 1rem 0;
+    }
 
     &:nth-child(2) {
       span {

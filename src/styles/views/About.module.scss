@@ -28,14 +28,27 @@
 
     &:nth-child(2) {
       padding: 4rem 0 0;
+
+      @include m.smartphone() {
+        display: block;
+      }
     }
 
     .header__wrapper {
       width: 50%;
       text-align: justify;
 
+      @include m.smartphone() {
+        width: 100%;
+      }
+
       &:nth-child(2) {
         width: 40%;
+
+        @include m.smartphone() {
+          padding: 4rem 0 0;
+          width: 100%;
+        }
       }
 
       .header__breakline {
@@ -66,6 +79,11 @@
       font-size: 6rem;
       line-height: calc(6rem * 1.1);
       text-transform: uppercase;
+
+      @include m.smartphone() {
+        font-size: 4rem;
+        line-height: calc(4rem * 1.1);
+      }
     }
 
     .header__index {
@@ -73,6 +91,11 @@
       line-height: calc(3rem * 1.5);
       text-transform: uppercase;
       text-decoration: .15rem solid c.$light-color underline;
+
+      @include m.smartphone() {
+        font-size: 2rem;
+        line-height: calc(2rem * 1.1);
+      }
     }
   }
 }
